@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* global message */
+.global-msg {
+  background: rgba(44, 44, 94, 0.609);
+  line-height: 32px;
+}
+.gbl-content {
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke;
+}
+
+/* header menu section */
+.nav-bar {
+  background: rgb(175, 175, 240);
+  color: white;
+  font-size: 20px;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li {
+  margin-left: 16px;
+}
+
+/* background is really important  to learn */
+.hero {
+  min-height: 80vh;
+  background: url(imgae.jpg), no-repeat, center, center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  width: 450px;
+  color: white;
+  background-color: rgb(114, 111, 114);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0.85;
+  /* if we use flex than the horizontal line wil convert into . */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.main {
+  display: flex;
+  margin-top: 32px;
+}
+
+.main-content {
+  width: 66%; /* very important this will give 66% width  */
+  min-height: 300px;
+}
+
+.side-links {
+  width: 34%;
+}
+
+.read-by-country {
+  background-color: yellowgreen;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.read-by-date {
+  background-color: rgb(17, 68, 207);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+article {
+  display: flex;
+  margin-top: 32px;
+  color: rgb(17, 31, 30);
+}
+
+.article-img {
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.recc {
+  margin-top: 2rem;
+  padding: 20px 0px;
+  background-color: yellow;
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 10px;
+  width: minmax(300px, 100%);
+  min-height: 300px;
+  background-color: white;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+  box-shadow: -5px 5px 10px 5px rgb(0, 0, 0, 0.3);
+}
+
+.card img {
+  border-radius: 5px;
+}
+
+.btn-card {
+  background-color: orange;
+  font-size: 18px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+}
+
+.btn-card:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.subscription {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* for hamburger */
+.hamburger {
+  display: none;
+}
+
+.footer {
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 32px;
+  min-height: 60px;
+}
+
+/* media query */
+@media (max-width: 768px) {
+  nav {
+    height: 65px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 32px; */
+  }
+  .main-content {
+    width: 100%;
+  }
+
+  .side-links {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .read-by-country,
+  .read-by-date {
+    width: 50%;
+  }
+
+  .card-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .side-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+
+  .read-by-country,
+  .read-by-date {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {
+    margin-top: 0.5rem;
+  }
+}
